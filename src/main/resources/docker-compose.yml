@@ -1,0 +1,15 @@
+services:
+  thymeleaf-db:
+    image: mysql:9.0.1
+    container_name: thymeleaf-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+  adminer:
+    image: adminer:4.8.0-standalone
+    container_name: adminer-4.8.0-standalone
+    restart: always
+    ports:
+      - 8181:8080
